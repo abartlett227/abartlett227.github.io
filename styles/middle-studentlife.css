@@ -1,0 +1,207 @@
+/* MAIN SECTION (Note this has much in common with middle-athletics.css) */
+div#main-container {
+    width: 100%;
+    background-color: #061844;
+}
+main {
+    width: 988px;
+    max-width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row-reverse; /* aside and section are side-by-side */
+}
+main aside#right-sidebar {
+    width: 256px;
+    height: auto;
+    flex-grow: 1;
+    background-color:#061844;
+}
+main aside#right-sidebar nav#right-nav {
+    margin-bottom: 80px;
+}
+main aside#right-sidebar nav#right-nav ul {
+    font-size: 1em;
+    margin-left: 10px;
+    text-align: left;
+}
+main aside#right-sidebar nav#right-nav ul li {
+    padding: 10px 10px 10px 10px;
+    display: block;
+    border-bottom: 0.5px solid rgba(255,255,255,0.5);
+    background-color: cadetblue;
+}
+main aside#right-sidebar nav#right-nav ul li a {
+    text-decoration: none;
+}
+nav#left-quicklinks {
+    height: 50px;
+    width: 100%;
+    background-color: #061844;
+}
+nav#left-quicklinks ul {
+    font-size: 1.3em;
+/*    margin-left: 0px;*/
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    margin: 0 auto;
+    width: 600px;
+    max-width: 100%;
+/*    margin-left: 30px;*/
+}
+nav#left-quicklinks ul li {
+/*    padding: 10px 0 10px 10px;*/
+    width: 30%;
+    height: 40px;
+    border: 1px solid white;
+    background-color: cadetblue;
+    display: block;
+    margin: 5px;
+    margin-left: 10px;
+    vertical-align: middle;
+    line-height: 40px;
+    text-align: center;
+    font-size: .7em;
+/*    border-top: 1.5px solid #fff;*/
+}
+
+main article#left-section {
+    width: calc(100% - 256px);
+    height: auto;
+    flex-grow: 1;
+    background-color: #ffffff;
+    color: #000;
+    position: relative;
+}
+main article#left-section div#page-banner-image {
+    min-width: 724px;
+    width: 100%;
+    background-image: url('../images/athletics-banner.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 0;
+    max-height: 205px;
+    padding-bottom: 28.31%; /* 205 / 724 = 28.31% */
+    /* This is a bit of a trick to ensure that
+    the #page-banner-image div height remains proportional
+    to the div's width */
+    display:none;
+}
+
+main article#left-section div#breadcrumbs  {
+    width: 100%;
+    padding-top: 10px;
+    text-align: right;
+    display:
+}
+main article#left-section div#breadcrumbs p {
+    margin-right: 15px;
+    color: #535251;
+    font-size: 0.9em;
+}
+main article#left-section div#breadcrumbs a {
+    text-decoration: underline;
+    color: #535251;
+}
+main article#left-section div#breadcrumbs a:hover, main section#right-section div#breadcrumbs a:focus {
+    text-decoration: none;
+}
+main article#left-section div#breadcrumbs span {
+    font-weight: bold;
+}
+
+main article#left-section div#page-content {
+    margin: 0 25px 100px;
+
+}
+main article#left-section div#page-content h1 {
+    font-weight: normal;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 10px auto;
+    color: #9c6409;
+    font-size: 2.3em;
+}
+main article#left-section div#page-content h2 {
+    font-weight: normal;
+    font-family: 'Work Sans', sans-serif;
+    color: cadetblue;
+    margin: 10px auto;
+    font-size: 1.3em;
+    color: #009bd7;
+}
+main article#left-section div#page-content p {
+    font-size: 0.9em;
+    margin: 10px auto;
+    padding-bottom: 15px;
+}
+main article#left-section div#page-content a {
+    color: #9c6409;
+    text-decoration: underline;
+}
+main article#left-section div#page-content a:hover, main section#left-section div#page-content a:focus {
+    color: #9c182f;
+    text-decoration: none;
+}
+/* for RWD (Responsive Web Design) */
+@media only screen and (max-width: 580px) {
+    main {
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column-reverse; /* ensures section is stacked ABOVE aside */
+        background-color: white;
+    }
+    main aside#right-sidebar {
+        width: 100%;
+        height: auto;
+        flex-grow: 1;
+        background-color: #ffffff;
+    }
+    main aside#right-sidebar nav#right-nav {
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+    main article#left-section {
+        width: 100%;
+        height: auto;
+        flex-grow: 1;
+        background-color: #ffffff;
+        color: #000;
+    }
+}
+/* styles for right-floated-div */
+#optional-right-floated-image {
+    float: right;
+    width: 210px;
+    height: 210px;
+    margin-left: 20px;
+    background-image:url('../images/sand-shark-logo.png');
+    background-size: contain;
+}
+
+.bx-wrapper {
+    box-shadow: 0 0 0 !important;
+}
+
+#desktop-slider {
+    margin: .5em;
+    width: 50%;
+    float:right;
+}
+
+#mobile-slider {
+    margin: .5em;
+    display: none;
+}
+
+
+
+@media only screen and (max-width:500px) {
+    #desktop-slider {
+        display: none;
+    }
+    #mobile-slider {
+    margin: .5em;
+    display: block;
+}
+}
